@@ -1,0 +1,22 @@
+@{
+  Layout = "_Layout";
+}
+<h2>This is the list of all Students attending UW</h2>
+
+@if(Model.Count == 0)
+{
+    <h3>Currently no Students Attending</h3>
+    <h4>Click <a href="/students/new"> HERE </a> to add student.</h4>
+    <h4>Click <a href="/">HERE</a> to return to main page.</h4>
+}
+
+else
+{
+    @foreach(var student in Model)
+    {
+          <li><a href="/students/show/@student.GetId()">@student.GetName()</a></li>
+    }
+    <h3>Click <a href="/students/new"> here </a> to add a new Student. </h3>
+    <h3><a href="/">Back to Home page</a></h3>
+
+}

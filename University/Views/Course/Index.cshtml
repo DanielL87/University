@@ -1,0 +1,22 @@
+@{
+  Layout = "_Layout";
+}
+<h2>This is the list of all courses available at UW</h2>
+
+@if(Model.Count == 0)
+{
+    <h3>Currently no classes available</h3>
+    <h4>Click <a href="/courses/new"> HERE </a> to add class.</h4>
+    <h4>Click <a href="/">HERE</a> to return to main page.</h4>
+}
+
+else
+{
+    @foreach(var course in Model)
+    {
+          <li><a href="/courses/show/@course.GetId()">@course.GetName()</a></li>
+    }
+    <h3>Click <a href="/courses/new"> here </a> to add a new course. </h3>
+    <h3><a href="/">Back to Home page</a></h3>
+
+}

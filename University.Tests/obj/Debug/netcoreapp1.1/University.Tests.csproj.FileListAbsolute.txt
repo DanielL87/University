@@ -1,0 +1,13 @@
+/Users/Guest/Desktop/University.Solution/University.Tests/bin/Debug/netcoreapp1.1/Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+/Users/Guest/Desktop/University.Solution/University.Tests/bin/Debug/netcoreapp1.1/Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+/Users/Guest/Desktop/University.Solution/University.Tests/bin/Debug/netcoreapp1.1/Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+/Users/Guest/Desktop/University.Solution/University.Tests/bin/Debug/netcoreapp1.1/University.Tests.deps.json
+/Users/Guest/Desktop/University.Solution/University.Tests/bin/Debug/netcoreapp1.1/University.Tests.runtimeconfig.json
+/Users/Guest/Desktop/University.Solution/University.Tests/bin/Debug/netcoreapp1.1/University.Tests.runtimeconfig.dev.json
+/Users/Guest/Desktop/University.Solution/University.Tests/bin/Debug/netcoreapp1.1/University.Tests.dll
+/Users/Guest/Desktop/University.Solution/University.Tests/bin/Debug/netcoreapp1.1/University.Tests.pdb
+/Users/Guest/Desktop/University.Solution/University.Tests/bin/Debug/netcoreapp1.1/University.dll
+/Users/Guest/Desktop/University.Solution/University.Tests/bin/Debug/netcoreapp1.1/University.pdb
+/Users/Guest/Desktop/University.Solution/University.Tests/obj/Debug/netcoreapp1.1/University.Tests.AssemblyInfo.cs
+/Users/Guest/Desktop/University.Solution/University.Tests/obj/Debug/netcoreapp1.1/University.Tests.dll
+/Users/Guest/Desktop/University.Solution/University.Tests/obj/Debug/netcoreapp1.1/University.Tests.pdb
