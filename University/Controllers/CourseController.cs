@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using University.Models;
+using System;
 
 namespace University.Controllers
 {
@@ -47,6 +48,16 @@ namespace University.Controllers
             Course newCourse = Course.FindById(id);
             Student foundStudent = Student.FindById(studentId);
             newCourse.AddStudent(foundStudent);
+            Console.WriteLine(studentId);
+            return RedirectToAction("Show");
+        }
+
+        [HttpPost("/courses/{id}/delete")]
+        public ActionResult Delete(int id, int studentId)
+        {
+            Course newCourse = Course.FindById(id);
+            newCourse.DeleteStudent(studentId);
+            Console.WriteLine(studentId);
             return RedirectToAction("Show");
         }
 

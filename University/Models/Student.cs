@@ -178,7 +178,6 @@ namespace University.Models
 
 
 
-
             //Clears and Overrides
 
     public static void ClearAll()
@@ -195,6 +194,22 @@ namespace University.Models
                 conn.Dispose();
             }
         }
+
+    public void Delete(int id)
+    {
+        MySqlConnection conn = DB.Connection();
+        conn.Open();
+        MySqlCommand cmd = new MySqlCommand("DELETE FROM students_courses WHERE student_id = @StudentId;", conn);
+        MySqlParameter studentIdParameter = new MySqlParameter();
+        studentIdParameter.ParameterName = "@StudentId";
+        studentIdParameter.Value = this.GetId();
+        cmd.Parameters.Add(studentIdParameter);
+        cmd.ExecuteNonQuery();
+        if (conn != null)
+        {
+            conn.Close();
+        }
+    }
 
     public override bool Equals(System.Object otherStudent)
         {

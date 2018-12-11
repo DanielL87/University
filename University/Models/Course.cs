@@ -176,6 +176,27 @@ namespace University.Models
             }
     
 //Clears and Overrides
+
+    public void DeleteStudent(int studentId)
+    {
+        MySqlConnection conn = DB.Connection();
+        conn.Open();
+        var cmd = conn.CreateCommand() as MySqlCommand;
+        cmd.CommandText = @"DELETE FROM students_courses WHERE student_id = @studentId;";
+
+        MySqlParameter coursesParameter = new MySqlParameter();
+        coursesParameter.ParameterName = "@studentId";
+        coursesParameter.Value = studentId;
+        cmd.Parameters.Add(coursesParameter);
+
+        cmd.ExecuteNonQuery();
+        if (conn != null)
+        {
+            conn.Close();
+        }
+     }
+
+
     public static void ClearAll()
     {
         MySqlConnection conn = DB.Connection();

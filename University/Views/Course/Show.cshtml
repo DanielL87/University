@@ -15,14 +15,26 @@
   <li>@student.GetName()</li>
 }
 
+<h2>Add a Student to this Course</h2>
 <form action="/courses/@Model["course"].GetId()" method="post">
-     <select name="studentId" >
+     <select name="studentId">
         @foreach(var student in @Model["allStudents"])
         {
-          <option class="dropdown-item"value=@student.GetId()>@student.GetName()</option>
+          <option class="dropdown-item" value=@student.GetId()>@student.GetName()</option>
         }
       </select>
      <button class="btn btn-primary btn-lg" type="submit">Add</button>
+</form>
+
+<h2>Delete Student from this Course:</h2>
+<form action="/courses/@Model["course"].GetId()/delete" method="post">
+     <select name="studentId">
+        @foreach(var student in @Model["allStudents"])
+        {
+          <option class="dropdown-item" value=@student.GetId()>@student.GetName()</option>
+        }
+      </select>
+     <button class="btn btn-primary btn-lg" type="submit">Delete</button>
 </form>
 
 <h3><a href="/courses">Back to course list</a></h3>
